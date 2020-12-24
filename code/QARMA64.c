@@ -324,7 +324,7 @@ text_t qarma64_dec(text_t plaintext, tweak_t tweak, key_t w0, key_t k0, int roun
 
 
 
-int main() {
+int test_main_function() {
 	text_t plaintext = 0xfb623599da6e8127;
 	key_t w0 = 0x84be85ce9804e94b;
 	key_t k0 = 0xec2802d4e0a488e9;
@@ -351,6 +351,7 @@ int main() {
 	ciphertext = qarma64_dec(ciphertext, tweak, w0, k0, 7);
 	printf("Plaintext  = 0x%016llx  %s\n", ciphertext, (ciphertext == plaintext) ? "√" : "×");
 
+	return 0;
 }
 
 
